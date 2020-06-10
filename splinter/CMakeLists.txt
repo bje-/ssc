@@ -30,8 +30,10 @@ set_default_compile_options()
 
 if(MSVC)
 	add_compile_options(/W2 /wd4267 /wd4244)
+else()
+	# Eigen produces a heap of these warnings
+	add_compile_options(-Wno-ignored-attributes -Wno-deprecated-declarations)
 endif(MSVC)
-
 
 #####################################################################################################################
 #

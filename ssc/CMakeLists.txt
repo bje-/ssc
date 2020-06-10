@@ -11,8 +11,8 @@ set(SSC_SRC
 		cmod_annualoutput.cpp
 		cmod_battery.cpp
 		cmod_battery.h
-        cmod_battery_stateful.cpp
-        cmod_battery_stateful.h
+		cmod_battery_stateful.cpp
+		cmod_battery_stateful.h
 		cmod_battwatts.cpp
 		cmod_battwatts.h
 		cmod_belpe.cpp
@@ -122,8 +122,8 @@ set(SSC_SRC
 		cmod_windpower.h
 		cmod_windpower_eqns.cpp
 		cmod_windpower_eqns.h
-        cmod_wind_landbosse.cpp
-        cmod_wind_landbosse.h
+		cmod_wind_landbosse.cpp
+		cmod_wind_landbosse.h
 		common.cpp
 		common.h
 		common_financial.cpp
@@ -133,7 +133,7 @@ set(SSC_SRC
 		csp_common.cpp
 		csp_common.h
 		ssc_equations.h
-        sscapi.cpp
+		sscapi.cpp
 		sscapi.h
 		tckernel.cpp
 		tckernel.h
@@ -161,6 +161,8 @@ set_default_compile_options()
 
 if(MSVC)
     add_compile_definitions( __DLL__ __VISUALC__ )
+else()
+    add_compile_options(-Wno-ignored-attributes -Wno-deprecated-declarations)
 endif()
 
 
