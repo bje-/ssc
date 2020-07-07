@@ -174,7 +174,6 @@ else()
       cmod_windpower_eqns.cpp
       cmod_utilityrate5_eqns.cpp)
     set_source_files_properties(${SRC_UNUSED_VARS} PROPERTIES COMPILE_FLAGS -Wno-unused-variable)
->>>>>>> upstream/develop
 endif()
 
 
